@@ -1,0 +1,44 @@
+{
+  "name": "defaults-explorer",
+  "productName": "defaults-explorer",
+  "version": "1.0.0",
+  "description": "My Electron application description",
+  "main": "src/index.js",
+  "private": true,
+  "scripts": {
+    "build:renderer": "esbuild src/renderer/main.jsx --bundle --format=iife --platform=browser --outfile=src/renderer.bundle.js --loader:.js=jsx",
+    "prestart": "npm run build:renderer",
+    "start": "electron-forge start",
+    "prepackage": "npm run build:renderer",
+    "package": "electron-forge package",
+    "premake": "npm run build:renderer",
+    "make": "electron-forge make",
+    "prepublish": "npm run build:renderer",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\""
+  },
+  "keywords": [],
+  "author": {
+    "name": "jmsaucier",
+    "email": "jmsaucier91@gmail.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.1",
+    "plist": "^3.1.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^7.11.1",
+    "@electron-forge/maker-deb": "^7.11.1",
+    "@electron-forge/maker-rpm": "^7.11.1",
+    "@electron-forge/maker-squirrel": "^7.11.1",
+    "@electron-forge/maker-zip": "^7.11.1",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.11.1",
+    "@electron-forge/plugin-fuses": "^7.11.1",
+    "@electron/fuses": "^1.8.0",
+    "electron": "41.2.2",
+    "esbuild": "^0.25.11"
+  }
+}
