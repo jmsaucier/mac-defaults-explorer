@@ -22,31 +22,31 @@ Defaults Explorer is a desktop app for browsing and searching macOS user default
 ## Prerequisites
 
 - macOS (this app relies on the built-in `defaults` command)
-- Node.js 18+ and npm
+- Node.js 18+ and pnpm
 
 ## Getting Started
 
 1. Install dependencies:
 
    ```bash
-   npm install
+   pnpm install
    ```
 
 2. Start the app in development:
 
    ```bash
-   npm start
+   pnpm start
    ```
 
-`npm start` runs `prestart`, which builds the renderer bundle before launching Electron.
+`pnpm start` runs `prestart`, which builds the renderer bundle before launching Electron.
 
 ## Available Scripts
 
-- `npm run build:renderer` - Bundle `src/renderer/main.jsx` into `src/renderer.bundle.js`
-- `npm start` - Build renderer, then launch Electron Forge in dev mode
-- `npm run package` - Build renderer, then package the app
-- `npm run make` - Build renderer, then create distributables
-- `npm run publish` - Build renderer, then publish via Electron Forge
+- `pnpm run build:renderer` - Bundle `src/renderer/main.jsx` into `src/renderer.bundle.js`
+- `pnpm start` - Build renderer, then launch Electron Forge in dev mode
+- `pnpm run package` - Build renderer, then package the app
+- `pnpm run make` - Build renderer, then create distributables
+- `pnpm run publish` - Build renderer, then publish via Electron Forge
 
 ## Project Structure
 
