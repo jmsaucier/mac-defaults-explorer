@@ -32,6 +32,12 @@ Defaults Explorer is a desktop app for browsing and searching macOS user default
    pnpm install
    ```
 
+   If `pnpm` warns about ignored build scripts (for example, for `electron` or `esbuild`), run:
+
+   ```bash
+   pnpm approve-builds
+   ```
+
 2. Start the app in development:
 
    ```bash
@@ -72,6 +78,10 @@ src/
 
 - The app is macOS-only because it depends on `defaults`.
 - Some domains may not export cleanly to plist; when parsing fails, raw output is still shown with an error message.
+
+## Troubleshooting
+
+- If `pnpm install` reports ignored build scripts, run `pnpm approve-builds` and allow `electron`/`esbuild`.
 
 ## License
 
